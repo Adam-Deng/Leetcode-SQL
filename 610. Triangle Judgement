@@ -1,4 +1,8 @@
 610. Triangle Judgement
 
 
-Select x, y, z, if(abs(x)+abs(y)>abs(z),'Yes','No') as triangle from triangle where x+y>z or x+z>y or y+z>x
+Select x, y, z, 
+CASE When x+y>z and x+z>y and y+z>x then 'Yes'
+Else 'No'
+End as triangle
+from triangle
